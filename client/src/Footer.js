@@ -13,7 +13,7 @@ function Footer() {
 
                 </Col>
                 <Col>
-                    <img src={qr} style={{width:'125px'}}></img>
+                    <img alt='qr code' src={qr} style={{width:'125px'}}></img>
                 </Col>
             </Row>
         </Container>

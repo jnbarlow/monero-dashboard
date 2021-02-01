@@ -12,20 +12,20 @@ import MoneroCard from './MoneroCard'
 function App() {
     let [moneroInfo, setMoneroInfo] = React.useState('');
 
-    React.useEffect(async ()=>{
-        try{
-            const result = await axios({
-                'method': 'GET',
-                'url': '/api/get_info'
-            });
-            setMoneroInfo(result.data);
-            console.log(result.data);
-        } catch (e) {
-            console.log('Error getting data from remote node:', e);
-        }
-
+    React.useEffect(()=>{
+        (async ()=>{
+            try{
+                const result = await axios({
+                    'method': 'GET',
+                    'url': '/api/get_info'
+                });
+                setMoneroInfo(result.data);
+                console.log(result.data);
+            } catch (e) {
+                console.log('Error getting data from remote node:', e);
+            }
+        })();
     }, [setMoneroInfo]);
-
 
     return (
         <Container className='app'>
