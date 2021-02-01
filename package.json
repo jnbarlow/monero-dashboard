@@ -1,0 +1,30 @@
+{
+  "name": "monero-dashboard",
+  "version": "0.1.0",
+  "description": "Monero Dashboard for pulling useful information from a local full node.",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jnbarlow/monero-dashboard.git"
+  },
+  "keywords": [
+    "monero",
+    "dashboard"
+  ],
+  "author": "John Barlow",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jnbarlow/monero-dashboard/issues"
+  },
+  "homepage": "https://github.com/jnbarlow/monero-dashboard#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-http-proxy": "^1.6.2",
+    "loglevel-colors": "^1.0.1"
+  }
+}
