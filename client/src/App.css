@@ -8,6 +8,10 @@
     min-height:200px;
 }
 
+.connections {
+    width:100%
+}
+
 .footerContainer {
     clear:both;
     padding-top:20px;
@@ -18,3 +22,12 @@
     padding-top:10px;
     padding-bottom:10px;
 }
+
+.progress {
+    margin-top: 20px
+}
+
+.connectionsHeader {
+    font-weight:bold;
+}
+

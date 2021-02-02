@@ -2,6 +2,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Timer from './MoneroContainer/Timer'
 
 function Header(props) {
     const update = props.info.update_avilable ? 'Yes! ' : 'not today...';
@@ -41,6 +42,14 @@ function Header(props) {
                     </Col>
                     <Col>
                         {busy}
+                    </Col>
+                </Row>
+                <Row>
+                    <Col/>
+                </Row>
+                <Row>
+                    <Col md='3'>
+                        <Timer/>
                     </Col>
                 </Row>
             </Container>
