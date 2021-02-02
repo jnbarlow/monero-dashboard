@@ -1,22 +1,22 @@
 import React, { PureComponent } from 'react';
 import axios from 'axios';
-import Header from '../../Header';
-import ServerCard from '../../ServerCard';
-import ConnectionCard from '../../ConnectionCard';
-import MoneroCard from '../../MoneroCard';
+import Header from '../Header';
+import ServerCard from '../cards/ServerCard';
+import ConnectionCard from '../cards/ConnectionCard';
+import MoneroCard from '../cards/MoneroCard';
 
 class MoneroContainer extends PureComponent {
   constructor(props) {
     super(props);
 
     this.moneroTnterval = null;
-
     this.state = {
       moneroInfo: {},
     };
   }
 
   componentDidMount() {
+    this.getMonero();
     // Start the monero timer
     this.moneroInterval = setInterval(this.getMonero, 30000);
   }
@@ -26,6 +26,9 @@ class MoneroContainer extends PureComponent {
     clearInterval(this.moneroInterval);
   }
 
+  /**
+   * gets data from the get_info endpoint
+   */
   getMonero = async () => {
     try {
       const result = await axios({
@@ -43,9 +46,7 @@ class MoneroContainer extends PureComponent {
   }
 
   render() {
-    const {
-      moneroInfo,
-    } = this.state;
+    const { moneroInfo } = this.state;
 
     return (
       <div className="MoneroContainer">
