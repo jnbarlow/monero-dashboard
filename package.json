@@ -4,6 +4,8 @@
   "description": "Monero Dashboard for pulling useful information from a local full node.",
   "main": "server/index.js",
   "scripts": {
+    "init": "npm install && cd client && npm install",
+    "dev": "concurrently -p \"[{name}]\" -n \"NODE,REACT\" -c \"bgBlue.bold,bgGreen.bold\" \"npm start\" \"cd client && npm start\"",
     "start": "node server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -26,5 +28,9 @@
     "express": "^4.17.1",
     "express-http-proxy": "^1.6.2",
     "loglevel-colors": "^1.0.1"
+  },
+  "postinstall": "cd client && npm install",
+  "devDependencies": {
+    "concurrently": "^5.3.0"
   }
 }
