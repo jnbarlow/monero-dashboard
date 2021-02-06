@@ -7,9 +7,9 @@
     "build": "cd client && npm run build && cd ../ && git add . && git commit -m \"create production build\"",
     "dev": "concurrently -p \"[{name}]\" -n \"NODE,REACT\" -c \"bgBlue.bold,bgGreen.bold\" \"nodemon start\" \"cd client && npm start\"",
     "init": "npm install && cd client && npm install",
-    "release:patch": "npm run build && npm release patch",
-    "release:major": "npm run build && npm release major",
-    "release:minor": "npm run build && npm release minor",
+    "release:patch": "npm run build && release patch",
+    "release:major": "npm run build && release major",
+    "release:minor": "npm run build && release minor",
     "start": "node server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
