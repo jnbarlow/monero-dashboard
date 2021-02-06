@@ -4,7 +4,7 @@
   "description": "Monero Dashboard for pulling useful information from a local full node.",
   "main": "server/index.js",
   "scripts": {
-    "build": "cd client && npm build && cd ../ && git add -a && git commit -m \"create production build\"",
+    "build": "cd client && npm run build && cd ../ && git add -a && git commit -m \"create production build\"",
     "dev": "concurrently -p \"[{name}]\" -n \"NODE,REACT\" -c \"bgBlue.bold,bgGreen.bold\" \"nodemon start\" \"cd client && npm start\"",
     "init": "npm install && cd client && npm install",
     "start": "node server/index.js",
