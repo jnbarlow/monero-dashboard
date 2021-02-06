@@ -1,6 +1,6 @@
 {
   "name": "monero-dashboard",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Monero Dashboard for pulling useful information from a local full node.",
   "main": "server/index.js",
   "scripts": {
@@ -10,6 +10,7 @@
     "release:patch": "npm run build && npx release patch",
     "release:major": "npm run build && npx release major",
     "release:minor": "npm run build && npx release minor",
+    "release:test": "release minor",
     "start": "node server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
