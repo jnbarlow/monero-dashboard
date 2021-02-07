@@ -4,18 +4,15 @@
   "description": "Monero Dashboard for pulling useful information from a local full node.",
   "main": "server/index.js",
   "scripts": {
-    "build": "cd client && npm run build && cd ../ && git add . && git commit -m \"create production build\"",
-    "changelog": "auto-changelog && git -a CHANGELOG.md",
+    "build": "cd client && npm run build && cd ../ && git add .",
+    "changelog": "auto-changelog && git add CHANGELOG.md",
     "dev": "concurrently -p \"[{name}]\" -n \"NODE,REACT\" -c \"bgBlue.bold,bgGreen.bold\" \"nodemon start\" \"cd client && npm start\"",
     "init": "npm install && cd client && npm install",
-    "preversion":"npm run build",
-    "postversion":"",
-    "release:patch": "npm run build && npm run npm run changelog",
-    "release:major": "npm run build && npm run changelog && release major",
-    "release:minor": "npm run build && npm run changelog && release minor",
+    "preversion": "npm run build",
+    "postversion": "git push origin main && git push --tags",
     "start": "node server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "version":"npm run changelog"
+    "version": "npm run changelog"
   },
   "repository": {
     "type": "git",
@@ -42,8 +39,7 @@
   "devDependencies": {
     "concurrently": "^5.3.0",
     "nodemon": "^2.0.7",
-    "npm-version": "^1.1.0",
-    "release": "^6.3.0"
+    "npm-version": "^1.1.0"
   },
   "auto-changelog": {
     "template": "keepachangelog",
