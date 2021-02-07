@@ -1,6 +1,7 @@
 # monero-dashboard
 
 The Monero Dashboard was designed to be a nicely formatted viewport into your local Monero node.
+
 ![screenshot](readme_assets/screenshot.png)
 
 # Getting Started
@@ -21,6 +22,12 @@ To Start the dashboard, run `npm start`
 # Contributing
 
 Please feel free to either submit issues for improvements, or fork the repo and make pull requests.
+
+The client will also need a .env file created in `client/` to allow the react server and node api servers to co-exist.
+
+```
+PORT=3001
+```
 
 To get started, run the following commands:
 
