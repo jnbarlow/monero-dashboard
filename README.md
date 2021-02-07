@@ -1,7 +1,7 @@
 # monero-dashboard
 
 The Monero Dashboard was designed to be a nicely formatted viewport into your local Monero node.
-!(readme_assets/screenshot.png)
+![screenshot](readme_assets/screenshot.png)
 
 # Getting Started
 
