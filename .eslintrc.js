@@ -1,7 +1,10 @@
 module.exports = {
 	root: true,
 	parser: 'babel-eslint',
-	env: { es6: true },
+	env: {
+		es6: true,
+		node:true
+	},
 	parserOptions: {
 		ecmaVersion: 9,
 		sourceType: 'script'
