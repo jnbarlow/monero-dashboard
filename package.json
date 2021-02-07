@@ -7,7 +7,9 @@
     "build": "cd client && npm run build && cd ../ && git add .",
     "changelog": "auto-changelog && git add CHANGELOG.md",
     "dev": "concurrently -p \"[{name}]\" -n \"NODE,REACT\" -c \"bgBlue.bold,bgGreen.bold\" \"nodemon start\" \"cd client && npm start\"",
+    "format": "prettier --write \"{**/,}*.{js,jsx,css,less,scss,json,graphql,gql,md,yaml,yml,html,webmanifest,babelrc,prettierrc}\"",
     "init": "npm install && cd client && npm install",
+    "lint": "eslint --cache .",
     "preversion": "npm run build",
     "postversion": "git push origin main && git push --tags",
     "start": "node server/index.js",
@@ -31,9 +33,12 @@
   "dependencies": {
     "auto-changelog": "^2.2.1",
     "dotenv": "^8.2.0",
+    "eslint": "^7.19.0",
+    "eslint-plugin-prettier": "^3.3.1",
     "express": "^4.17.1",
     "express-http-proxy": "^1.6.2",
-    "loglevel-colors": "^1.0.1"
+    "loglevel-colors": "^1.0.1",
+    "prettier": "^2.2.1"
   },
   "postinstall": "cd client && npm install",
   "devDependencies": {
