@@ -45,8 +45,12 @@ body {
     background-color:white
 }
 
-.jumbotron h1 {
+.jumbotron h1, h2 {
     color: #F26822;
+}
+
+.jumbotron h2 {
+    text-align:center;
 }
 
 .progress-bar {
@@ -57,4 +61,22 @@ body {
     width:215px;
     margin-top:-10px;
     margin-right:-5px;
+}
+
+.cryptocompare {
+    margin-top:30px;
+    font-size:14px;
+    text-align:center;
+}
+
+.cryptocompare a {
+    color:#F26822;
+}
+
+.currencyLabel {
+    text-align:right;
+}
+
+.currency {
+    text-align:left;
 }

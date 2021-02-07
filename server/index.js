@@ -7,6 +7,7 @@ const proxy = require('express-http-proxy');
 const app = express()
 const port = process.env.port || 3000
 const remote_node = `${process.env.MONERO_HOST || 'localhost'}:${process.env.MONERO_PORT || 18081}`;
+const prices = 'https://min-api.cryptocompare.com/data/price';
 
 app.use('/api', proxy(remote_node));
 
@@ -17,4 +18,3 @@ app.listen(port, () => {
     log.info(`Remote node: ${remote_node}`);
 
 })
-//test commit for version.
