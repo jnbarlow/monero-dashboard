@@ -1,5 +1,5 @@
 import { React, PureComponent } from 'react';
-import ProgressBar from 'react-bootstrap/ProgressBar'
+import ProgressBar from 'react-bootstrap/ProgressBar';
 
 class Timer extends PureComponent {
     tickTime = 30000;
@@ -8,7 +8,7 @@ class Timer extends PureComponent {
         this.tickInterval = null;
 
         this.state = {
-            tick:this.tickTime,
+            tick: this.tickTime
         };
     }
 
@@ -25,18 +25,18 @@ class Timer extends PureComponent {
     //refresh timer for display
     tick = () => {
         const next = this.state.tick - 1000;
-        if(this.state.tick > 0) {
-            this.setState({tick:next});
+        if (this.state.tick > 0) {
+            this.setState({ tick: next });
         } else {
-            this.setState({tick:this.tickTime});
+            this.setState({ tick: this.tickTime });
         }
-    }
+    };
 
     render() {
-        const tick = this.state.tick/1000;
+        const tick = this.state.tick / 1000;
 
         return (
-            <ProgressBar animated className='progress' max={30} now={tick} label={`${tick} s`}/>
+            <ProgressBar animated className="progress" max={30} now={tick} label={`${tick} s`} />
         );
     }
 }

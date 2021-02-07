@@ -1,56 +1,56 @@
 {
-  "name": "monero-dashboard",
-  "version": "0.1.2",
-  "description": "Monero Dashboard for pulling useful information from a local full node.",
-  "main": "server/index.js",
-  "scripts": {
-    "build": "cd client && npm run build && cd ../ && git add .",
-    "changelog": "auto-changelog && git add CHANGELOG.md",
-    "dev": "concurrently -p \"[{name}]\" -n \"NODE,REACT\" -c \"bgBlue.bold,bgGreen.bold\" \"nodemon start\" \"cd client && npm start\"",
-    "format": "prettier --write \"{**/,}*.{js,jsx,css,less,scss,json,graphql,gql,md,yaml,yml,html,webmanifest,babelrc,prettierrc}\"",
-    "init": "npm install && cd client && npm install",
-    "lint": "eslint --cache .",
-    "preversion": "npm run build",
-    "postversion": "git push origin main && git push --tags",
-    "start": "node server/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "version": "npm run changelog"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/jnbarlow/monero-dashboard.git"
-  },
-  "keywords": [
-    "monero",
-    "dashboard"
-  ],
-  "author": "John Barlow",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/jnbarlow/monero-dashboard/issues"
-  },
-  "homepage": "https://github.com/jnbarlow/monero-dashboard#readme",
-  "dependencies": {
-    "auto-changelog": "^2.2.1",
-    "babel-eslint": "^10.1.0",
-    "dotenv": "^8.2.0",
-    "eslint": "^7.19.0",
-    "eslint-config-prettier": "^7.2.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "express": "^4.17.1",
-    "express-http-proxy": "^1.6.2",
-    "loglevel-colors": "^1.0.1",
-    "prettier": "^2.2.1"
-  },
-  "postinstall": "cd client && npm install",
-  "devDependencies": {
-    "concurrently": "^5.3.0",
-    "nodemon": "^2.0.7",
-    "npm-version": "^1.1.0"
-  },
-  "auto-changelog": {
-    "template": "keepachangelog",
-    "package": true,
-    "commitLimit": false
-  }
+    "name": "monero-dashboard",
+    "version": "0.1.2",
+    "description": "Monero Dashboard for pulling useful information from a local full node.",
+    "main": "server/index.js",
+    "scripts": {
+        "build": "cd client && npm run build && cd ../ && git add .",
+        "changelog": "auto-changelog && git add CHANGELOG.md",
+        "dev": "concurrently -p \"[{name}]\" -n \"NODE,REACT\" -c \"bgBlue.bold,bgGreen.bold\" \"nodemon start\" \"cd client && npm start\"",
+        "format": "prettier --write \"{**/,}*.{js,jsx,css,less,scss,json,graphql,gql,md,yaml,yml,html,webmanifest,babelrc,prettierrc}\"",
+        "init": "npm install && cd client && npm install",
+        "lint": "eslint --cache .",
+        "preversion": "npm run build",
+        "postversion": "git push origin main && git push --tags",
+        "start": "node server/index.js",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "version": "npm run changelog"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/jnbarlow/monero-dashboard.git"
+    },
+    "keywords": [
+        "monero",
+        "dashboard"
+    ],
+    "author": "John Barlow",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/jnbarlow/monero-dashboard/issues"
+    },
+    "homepage": "https://github.com/jnbarlow/monero-dashboard#readme",
+    "dependencies": {
+        "auto-changelog": "^2.2.1",
+        "babel-eslint": "^10.1.0",
+        "dotenv": "^8.2.0",
+        "eslint": "^7.19.0",
+        "eslint-config-prettier": "^7.2.0",
+        "eslint-plugin-prettier": "^3.3.1",
+        "express": "^4.17.1",
+        "express-http-proxy": "^1.6.2",
+        "loglevel-colors": "^1.0.1",
+        "prettier": "^2.2.1"
+    },
+    "postinstall": "cd client && npm install",
+    "devDependencies": {
+        "concurrently": "^5.3.0",
+        "nodemon": "^2.0.7",
+        "npm-version": "^1.1.0"
+    },
+    "auto-changelog": {
+        "template": "keepachangelog",
+        "package": true,
+        "commitLimit": false
+    }
 }

@@ -16,7 +16,7 @@ class MoneroContainer extends PureComponent {
         this.connectionsInterval = null;
         this.state = {
             moneroInfo: {},
-            tick:this.tickTime,
+            tick: this.tickTime,
             connections: []
         };
     }
@@ -45,12 +45,12 @@ class MoneroContainer extends PureComponent {
     //refresh timer for display
     tick = () => {
         const next = this.state.tick - 1000;
-        if(this.state.tick > 0) {
-            this.setState({tick:next});
+        if (this.state.tick > 0) {
+            this.setState({ tick: next });
         } else {
-            this.setState({tick:this.tickTime});
+            this.setState({ tick: this.tickTime });
         }
-    }
+    };
 
     /**
      * gets data from the get_info endpoint
@@ -58,48 +58,47 @@ class MoneroContainer extends PureComponent {
     getMonero = async () => {
         try {
             const result = await axios({
-                'method': 'GET',
-                'url': '/api/get_info',
+                method: 'GET',
+                url: '/api/get_info'
             });
 
             this.setState({
-                moneroInfo: result.data,
+                moneroInfo: result.data
             });
-
         } catch (err) {
             console.error('Error fetching monero data', err);
         }
-    }
+    };
 
     /**
      * gets connections via json_rpc
      */
-    getConnections = async() => {
+    getConnections = async () => {
         try {
-            const result = await axios.post(
-                '/api/json_rpc',
-                {"jsonrpc":"2.0","id":"0","method":"get_connections"}
-            );
-
-            this.setState({
-                connections: result.data.result.connections,
+            const result = await axios.post('/api/json_rpc', {
+                jsonrpc: '2.0',
+                id: '0',
+                method: 'get_connections'
             });
 
+            this.setState({
+                connections: result.data.result.connections
+            });
         } catch (err) {
             console.error('Error fetching monero data', err);
         }
-    }
+    };
 
     render() {
         const { moneroInfo, tick, connections } = this.state;
 
         return (
             <div className="MoneroContainer">
-                <Header info={moneroInfo} tick={tick}/>
-                <ServerCard info={moneroInfo}/>
-                <ConnectionCard info={moneroInfo}/>
-                <MoneroCard info={moneroInfo}/>
-                <ConnectionsCard connections={connections}/>
+                <Header info={moneroInfo} tick={tick} />
+                <ServerCard info={moneroInfo} />
+                <ConnectionCard info={moneroInfo} />
+                <MoneroCard info={moneroInfo} />
+                <ConnectionsCard connections={connections} />
             </div>
         );
     }
