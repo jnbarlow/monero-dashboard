@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Timer from './MoneroContainer/Timer'
+import monero_logo from '../monero-logo.png'
 
 function Header(props) {
     const update = props.info.update_avilable ? 'Yes! ' : 'not today...';
@@ -10,7 +11,7 @@ function Header(props) {
 
     return (
         <Jumbotron>
-            <h1>Monero Dashboard</h1>
+            <h1><img src={monero_logo} className='logo'/> Dashboard</h1>
             <Container>
                 <Row>
                     <Col md='4'>

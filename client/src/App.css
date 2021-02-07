@@ -1,15 +1,16 @@
 .app {
-    width:90%;
+    width:1140px;
 }
 
 .dataCard {
-    width:33.3%;
+    width:365px;
     float:left;
     min-height:200px;
+    margin:2.5px
 }
 
 .connections {
-    width:100%
+    width:1105px;
 }
 
 .footerContainer {
@@ -18,7 +19,7 @@
 }
 .footer {
     clear:both;
-    background-color:lightgray;
+    background-color:#EDEEF0;
     padding-top:10px;
     padding-bottom:10px;
 }
@@ -31,3 +32,29 @@
     font-weight:bold;
 }
 
+body {
+    background-color:#4D4D4D
+}
+
+.card-title {
+    color: #F26822;
+    font-weight:bold;
+}
+
+.jumbotron {
+    background-color:white
+}
+
+.jumbotron h1 {
+    color: #F26822;
+}
+
+.progress-bar {
+    background-color:#F26822;
+}
+
+.logo {
+    width:215px;
+    margin-top:-10px;
+    margin-right:-5px;
+}
