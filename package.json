@@ -39,8 +39,10 @@
         "eslint-plugin-prettier": "^3.3.1",
         "express": "^4.17.1",
         "express-http-proxy": "^1.6.2",
+        "husky": "^4.3.8",
         "loglevel-colors": "^1.0.1",
-        "prettier": "^2.2.1"
+        "prettier": "^2.2.1",
+        "pretty-quick": "^3.1.0"
     },
     "postinstall": "cd client && npm install",
     "devDependencies": {

@@ -12,7 +12,7 @@ module.exports = {
     extends: ['eslint:recommended', 'prettier'],
     rules: {
         eqeqeq: ['error', 'smart'],
-        indent: ['error', 'tab', { SwitchCase: 1 }],
+        indent: [2, 4, { SwitchCase: 1 }],
         'linebreak-style': ['error', 'unix'],
         quotes: ['error', 'single', { avoidEscape: true }],
         semi: ['error', 'always'],
