@@ -43,4 +43,5 @@ Prettier and eslint will keep your code in line with the coding standards for th
 ### Donate
 
 8Adfyz4eUijhttLTa4W3Vzj2SFZGVWyT6GX4HADXScQ1d5FgyGssQETHwKZhSn7CStWafUcXzr6758njdqXPsYMdSEkLMyb
+
 ![qr](client/src/qr.jpg)
