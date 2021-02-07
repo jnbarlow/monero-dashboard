@@ -32,3 +32,8 @@ npm npm dev
 This will start the api server on port `3000`, and the react server on `3001`. Do your testing/dev against `localhost:3001`
 
 Prettier and eslint will keep your code in line with the coding standards for the project.
+
+### Donate
+
+8Adfyz4eUijhttLTa4W3Vzj2SFZGVWyT6GX4HADXScQ1d5FgyGssQETHwKZhSn7CStWafUcXzr6758njdqXPsYMdSEkLMyb
+![qr](client/src/qr.jpg)
