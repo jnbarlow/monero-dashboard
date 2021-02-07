@@ -5,13 +5,6 @@
 	"endOfLine": "lf",
 	"trailingComma": "none",
 	"arrowParens": "avoid",
-	"overrides": [
-		{
-			"files": "package*.json",
-			"options": {
-				"useTabs": false,
-				"tabWidth": 4
-			}
-		}
-	]
+	"useTabs": false,
+	"tabWidth": 4
 }
