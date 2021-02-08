@@ -10,6 +10,15 @@ const remote_node = `${process.env.MONERO_HOST || 'localhost'}:${process.env.MON
 
 app.use('/api', proxy(remote_node));
 
+app.get('/settings', (req, res) => {
+    const { MONERO_HOST, MONERO_PORT, TICKER } = process.env;
+    res.send({
+        MONERO_HOST,
+        MONERO_PORT,
+        TICKER
+    });
+});
+
 app.use('/', express.static('client/build'));
 
 app.listen(port, () => {

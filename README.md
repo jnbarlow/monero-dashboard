@@ -15,6 +15,14 @@ MONERO_HOST=10.1.1.1
 MONERO_PORT=18081
 ```
 
+All Settings:
+
+```
+MONERO_HOST=<IP of remote node> | defaults to localhost
+MONERO_PORT=<port of remote node> | defaults to 18081
+TICKER=<enable XMR ticker> | defaults to false
+```
+
 That said, the host machine will need to have `node` and `npm` installed.
 
 To Start the dashboard, run `npm start`
