@@ -21,6 +21,7 @@ All Settings:
 MONERO_HOST=<IP of remote node> | defaults to localhost
 MONERO_PORT=<port of remote node> | defaults to 18081
 TICKER=<enable XMR ticker> | defaults to false
+PORT=<port to run the app> | defaults to 3000, needs elevated access to run at 80
 ```
 
 That said, the host machine will need to have `node` and `npm` installed.
