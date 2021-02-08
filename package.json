@@ -13,7 +13,7 @@
         "lint": "eslint --cache .",
         "preversion": "npm run build",
         "postversion": "git push origin main && git push --tags",
-        "start": "node server/index.js",
+        "start": "npm install --production && node server/index.js",
         "test": "echo \"Error: no test specified\" && exit 1",
         "version": "npm run changelog"
     },
