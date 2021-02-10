@@ -94,13 +94,14 @@ class Header extends PureComponent {
                                     {(() => {
                                         if (version.version !== this.remoteVersion) {
                                             return (
-                                                <Col md="3">
+                                                <Col>
                                                     <a
                                                         href="https://github.com/jnbarlow/monero-dashboard"
                                                         target="_blank"
                                                     >
                                                         Update Available!
                                                     </a>
+                                                    &nbsp;-&nbsp; (v{this.remoteVersion})
                                                 </Col>
                                             );
                                         }
