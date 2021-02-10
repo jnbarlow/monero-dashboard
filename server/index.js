@@ -9,12 +9,6 @@ const port = process.env.PORT || 3000;
 const remote_node = `${process.env.MONERO_HOST || 'localhost'}:${process.env.MONERO_PORT || 18081}`;
 
 app.use('/api', proxy(remote_node));
-app.use(
-    '/version',
-    proxy('http://raw.githubusercontent.com/jnbarlow/monero-dashboard/main/nodemon.json', {
-        preserveHostHdr: true
-    })
-);
 
 app.get('/settings', (req, res) => {
     const { MONERO_HOST, MONERO_PORT, TICKER } = process.env;

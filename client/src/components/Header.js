@@ -42,7 +42,7 @@ class Header extends PureComponent {
     };
 
     /**
-     * get settings from the server.
+     * get latest version info from github.
      */
     getVersion = async () => {
         try {
