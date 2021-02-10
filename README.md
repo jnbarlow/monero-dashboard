@@ -41,13 +41,14 @@ PORT=3001
 To get started, run the following commands:
 
 ```
-npm run init:dev
+npm run init
 npm run dev
 ```
 
 This will start the api server on port `3000`, and the react server on `3001`. Do your testing/dev against `localhost:3001`
 
-Prettier and eslint will keep your code in line with the coding standards for the project.
+Prettier and eslint will keep your code in line with the coding standards for the project. Code comments: The more the merrier. Please
+comment any new functions or new program flows.
 
 ### Donate
 
