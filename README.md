@@ -50,6 +50,8 @@ This will start the api server on port `3000`, and the react server on `3001`. D
 Prettier and eslint will keep your code in line with the coding standards for the project. Code comments: The more the merrier. Please
 comment any new functions or new program flows.
 
+Open up all pull requests against the `develop` branch.
+
 ### Donate
 
 8Adfyz4eUijhttLTa4W3Vzj2SFZGVWyT6GX4HADXScQ1d5FgyGssQETHwKZhSn7CStWafUcXzr6758njdqXPsYMdSEkLMyb
