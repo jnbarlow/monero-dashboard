@@ -7,11 +7,12 @@ import monero_logo from '../monero-logo.png';
 import Prices from './ConversionContainer/ConversionContainer';
 import axios from 'axios';
 import { React, PureComponent } from 'react';
+import version from '../version.json';
 
 class Header extends PureComponent {
     constructor(props) {
         super(props);
-
+        this.remoteVersion = version.version;
         this.state = {
             ticker: false
         };
@@ -19,6 +20,7 @@ class Header extends PureComponent {
 
     componentDidMount() {
         this.getSettings();
+        this.getVersion();
     }
 
     /**
@@ -36,6 +38,22 @@ class Header extends PureComponent {
             });
         } catch (err) {
             console.error('Error fetching monero data', err);
+        }
+    };
+
+    /**
+     * get latest version info from github.
+     */
+    getVersion = async () => {
+        try {
+            const result = await axios({
+                method: 'GET',
+                url: 'https://raw.githubusercontent.com/jnbarlow/monero-dashboard/main/version.json'
+            });
+
+            this.remoteVersion = result.data.version;
+        } catch (err) {
+            console.error('Error fetching version data', err);
         }
     };
 
@@ -69,6 +87,24 @@ class Header extends PureComponent {
                                 <Row>
                                     <Col md="4">Busy Syncing:</Col>
                                     <Col>{busy}</Col>
+                                </Row>
+                                <Row>
+                                    <Col md="4">Dashboard Version:</Col>
+                                    <Col md="2">v{version.version}</Col>
+                                    {(() => {
+                                        if (version.version !== this.remoteVersion) {
+                                            return (
+                                                <Col md="3">
+                                                    <a
+                                                        href="https://github.com/jnbarlow/monero-dashboard"
+                                                        target="_blank"
+                                                    >
+                                                        Update Available!
+                                                    </a>
+                                                </Col>
+                                            );
+                                        }
+                                    })()}
                                 </Row>
                                 <Row>
                                     <Col />
