@@ -10,8 +10,7 @@
         "format": "prettier --write \"{**/,}*.{js,jsx,css,less,scss,json,graphql,gql,md,yaml,yml,html,webmanifest,babelrc,prettierrc}\"",
         "init": "npm install && cd client && npm install",
         "lint": "eslint --cache .",
-        "postversion": "",
-        "publish": "git push origin main && git push --tags",
+        "postversion": "git push origin main && git push --tags",
         "start": "npm install --production && node server/index.js",
         "test": "echo \"Error: no test specified\" && exit 1",
         "version": "node version.js && npm run build && npm run changelog"
