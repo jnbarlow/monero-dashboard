@@ -41,8 +41,8 @@ PORT=3001
 To get started, run the following commands:
 
 ```
-npm run init
-npm npm dev
+npm run init:dev
+npm run dev
 ```
 
 This will start the api server on port `3000`, and the react server on `3001`. Do your testing/dev against `localhost:3001`

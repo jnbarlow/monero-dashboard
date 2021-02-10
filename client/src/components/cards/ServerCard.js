@@ -13,13 +13,13 @@ function ServerCard(props) {
                         <Row>
                             <Col md="6">Database Size:</Col>
                             <Col md="6">
-                                {(props.info.database_size / 1024 / 1024 / 1024).toFixed(2)} GB
+                                {(props.info.database_size / 1024 / 1024 / 1024).toFixed(2)} GiB
                             </Col>
                         </Row>
                         <Row>
                             <Col md="6">Free Space:</Col>
                             <Col md="6">
-                                {(props.info.free_space / 1024 / 1024 / 1024).toFixed(2)} GB
+                                {(props.info.free_space / 1024 / 1024 / 1024).toFixed(2)} GiB
                             </Col>
                         </Row>
                     </Container>
