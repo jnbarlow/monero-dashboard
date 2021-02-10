@@ -48,7 +48,7 @@ class Header extends PureComponent {
         try {
             const result = await axios({
                 method: 'GET',
-                url: 'https://raw.githubusercontent.com/jnbarlow/monero-dashboard/main/version.json'
+                url: `https://raw.githubusercontent.com/jnbarlow/monero-dashboard/main/version.json?${Date().getTime()}`
             });
 
             this.remoteVersion = result.data.version;
