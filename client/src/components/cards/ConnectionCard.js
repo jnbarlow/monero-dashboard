@@ -11,7 +11,7 @@ function ConnectionCard(props) {
                 <Card.Text>
                     <Container>
                         <Row>
-                            <Col md="8">Incomming Connections:</Col>
+                            <Col md="8">Incoming Connections:</Col>
                             <Col md="4">{props.info.incoming_connections_count}</Col>
                         </Row>
                         <Row>

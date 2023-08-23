@@ -98,6 +98,7 @@ class Header extends PureComponent {
                                                     <a
                                                         href="https://github.com/jnbarlow/monero-dashboard"
                                                         target="_blank"
+                                                        rel="noreferrer"
                                                     >
                                                         Update Available!
                                                     </a>
