@@ -19,8 +19,11 @@ class Header extends PureComponent {
     }
 
     componentDidMount() {
-        this.getSettings();
-        this.getVersion();
+        (async () => {
+            await this.getSettings();
+            await this.getVersion();
+            this.setState({ remoteVersion: this.remoteVersion });
+        })();
     }
 
     /**
@@ -48,7 +51,7 @@ class Header extends PureComponent {
         try {
             const result = await axios({
                 method: 'GET',
-                url: `https://raw.githubusercontent.com/jnbarlow/monero-dashboard/main/version.json?${Date().getTime()}`
+                url: `https://raw.githubusercontent.com/jnbarlow/monero-dashboard/main/version.json?${new Date().getTime()}`
             });
 
             this.remoteVersion = result.data.version;
@@ -59,7 +62,7 @@ class Header extends PureComponent {
 
     render() {
         const props = this.props;
-        const update = props.info.update_avilable ? 'Yes! ' : 'not today...';
+        const update = props.info.update_available ? 'Yes! ' : 'not today...';
         const busy = props.info.busy_syncing ? 'Yes, catching up.' : 'Nope, up to date.';
         const { ticker } = this.state;
 
