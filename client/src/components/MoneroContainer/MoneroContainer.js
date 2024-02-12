@@ -62,6 +62,15 @@ class MoneroContainer extends PureComponent {
                 url: '/api/get_info'
             });
 
+            if (result.data.busy_syncing && result.data.target_height > 0) {
+                result.data.sync_percentage = (
+                    (result.data.height / result.data.target_height) *
+                    100
+                ).toPrecision(4);
+            } else {
+                result.data.sync_percentage = 100;
+            }
+
             this.setState({
                 moneroInfo: result.data
             });

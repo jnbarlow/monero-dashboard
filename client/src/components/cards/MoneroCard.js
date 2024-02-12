@@ -12,15 +12,31 @@ function MoneroCard(props) {
                     <Container>
                         <Row>
                             <Col md="6">Difficulty</Col>
-                            <Col md="6">{props.info.difficulty}</Col>
+                            <Col md="6">
+                                <div class="moneroStats">
+                                    {props.info.difficulty?.toLocaleString()}
+                                </div>
+                            </Col>
                         </Row>
                         <Row>
                             <Col md="6">Height</Col>
-                            <Col md="6">{props.info.height}</Col>
+                            <Col md="6">
+                                <div class="moneroStats">{props.info.height?.toLocaleString()}</div>
+                            </Col>
                         </Row>
                         <Row>
                             <Col md="6">Target Height</Col>
-                            <Col md="6">{props.info.target_height}</Col>
+                            <Col md="6">
+                                <div class="moneroStats">
+                                    {props.info.target_height?.toLocaleString()}
+                                </div>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col md="6">Sync Percentage</Col>
+                            <Col md="6">
+                                <div class="moneroStats">{props.info.sync_percentage}%</div>
+                            </Col>
                         </Row>
                     </Container>
                 </Card.Text>

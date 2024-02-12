@@ -37,6 +37,7 @@
     },
     "postinstall": "cd client && npm install",
     "devDependencies": {
+        "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
         "auto-changelog": "^2.2.1",
         "babel-eslint": "^10.1.0",
         "concurrently": "^5.3.0",
