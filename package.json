@@ -1,6 +1,6 @@
 {
     "name": "monero-dashboard",
-    "version": "1.0.12",
+    "version": "1.1.0",
     "description": "Monero Dashboard for pulling useful information from a local full node.",
     "main": "server/index.js",
     "scripts": {
