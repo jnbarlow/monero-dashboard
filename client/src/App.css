@@ -85,3 +85,7 @@ a:hover {
 .currency {
     text-align: left;
 }
+
+.moneroStats {
+    text-align: right;
+}

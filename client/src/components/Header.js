@@ -72,7 +72,7 @@ class Header extends PureComponent {
                     <Row>
                         <Col md="8">
                             <h1>
-                                <img src={monero_logo} className="logo" /> Dashboard
+                                <img src={monero_logo} className="logo" alt="logo" /> Dashboard
                             </h1>
                             <Container>
                                 <Row>

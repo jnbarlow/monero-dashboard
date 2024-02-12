@@ -6,7 +6,7 @@ function ConnectionsCard(props) {
     // Shamelessly copied from SO. Make the bytes easy to read.
     // https://stackoverflow.com/questions/10420352/converting-file-size-in-bytes-to-human-readable-string/10420404
     function humanBytes(bytes) {
-        var i = bytes == 0 ? 0 : Math.floor(Math.log(bytes) / Math.log(1024));
+        var i = bytes === 0 ? 0 : Math.floor(Math.log(bytes) / Math.log(1024));
         return (
             (bytes / Math.pow(1024, i)).toFixed(2) * 1 + ' ' + ['B', 'KiB', 'MiB', 'GiB', 'TiB'][i]
         );
